@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAGA SMART TERAKOYA - 名札メーカー</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="SAGA SMART TERAKOYA ロゴ">
+        <div>名札メーカー</div>
+    </header>
+
+    <main>
+        <section>
+            <h2>簡単5ステップで作成</h2>
+            <ol>
+                <li><span class="step-number">1</span>アイコンを選択</li>
+                <li><span class="step-number">2</span>情報を入力</li>
+                <li><span class="step-number">3</span>名札プレビューの確認</li>
+                <li><span class="step-number">4</span>画像をダウンロード</li>
+                <li><span class="step-number">5</span>印刷して名札ケースにIN!</li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2><span class="step-number">1</span>アイコンを選択</h2>
+            <label for="profileImage" class="custom-file-upload">アイコンを選択</label>
+            <input type="file" id="profileImage" accept="image/*">
+        </section>
+        
+        <section>
+            <h2><span class="step-number">2</span>情報を入力</h2>
+            <div class="form-container">
+                <input type="text" id="name" class="input" placeholder="名前を入力してください">
+                <input type="text" id="skills" class="input" placeholder="スキルを入力してください">
+                <input type="text" id="hobbies" class="input" placeholder="趣味を入力してください">
+                <input type="text" id="lineQrLink" class="input" placeholder="LINEのQRコードリンク">
+            </div>
+        </section>
+        
+        <section>
+            <h2><span class="step-number">3</span>名札のプレビュー確認</h2>
+            <p class="info-text">※アイコンは自由に動かすことができます</p>
+            <canvas id="myCanvas"></canvas>
+        </section>
+        
+        <section>
+            <h2><span class="step-number">4</span>画像をダウンロード</h2>
+            <button id="downloadBtn">ダウンロード</button>
+        </section>
+
+        <section>
+            <h2><span class="step-number">5</span>印刷して名札ケースにIN!</h2>
+            <ul>
+                <li>※印刷時は用紙サイズを「はがき」に設定してください。</li>
+                <li>※名札ケース買いに行くのめんどくさい！という方は<a href="https://www.amazon.co.jp/dp/B081N4D2GH" target="_blank">こちら</a>がおすすめです。</li>
+                <li>
+                    ※コピー機がない場合はコンビニでも印刷できます：<br>
+                    <a href="https://lite.printing.ne.jp/web" target="_blank">セブンイレブン</a> |
+                    <a href="https://networkprint.ne.jp/Lite/start?lang=jajp" target="_blank">ローソン・ファミマ・ミニストップ</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+     <script src="script.js"></script>
+</body>
+</html>
